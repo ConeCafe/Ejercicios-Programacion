@@ -15,10 +15,9 @@ int kap(int);
 int kapI(int, int);
 
 int main(){
-	printf("Introduce un numero menor o igual a 9999: \n");
 	int n;
 	scanf("%d", &n);
-	printf("Numero iteraciones: %d\n", kap(n));
+	printf("Numero iteraciones:  %d\n", kap(n));
 
 }
 
@@ -42,21 +41,19 @@ int ordenaNA(int num){
 }
 //invierte de orden los dígitos de un número. Hay que usar antes el metodo ordenaNA si queremos que este metodo ordene de orden ascendente a descendente.
 int ordenaND(int num){
-	//nDigits = número de dígitos de un número - 1
 	int nDigits = floor(log10(abs(num)));
 
 	if(num < 10){
 		return num;
 	}
 	else{
-		//Último dígito del número que recibe la función * 10^(nº dígitos del número que recibe la función - 1) + llamada recursiva
 		return num %10 * pow(10, nDigits)  + ordenaND((num - num % 10)/10);
 	}
 
 }
-//recursivo final, al principio siempre habra 1 iteración
+//recursivo final, al principio siempre habra 0 iteraciones
 int kap(int i){
-	return kapI(i, 1);
+	return kapI(i, 0);
 }
 
 
@@ -70,6 +67,10 @@ int kapI(int i, int c){
 	}
 	if(a-b==6174){
 		return contador;
+	}
+	if(a-b==0){
+		printf("No se pudo realizar la operacion. El numero debe tener al menos dos digitos diferentes\n");
+		return 0;
 	}
 	else{
 		contador++;
