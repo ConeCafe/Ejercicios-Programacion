@@ -22,7 +22,7 @@ int main(){
 
 }
 
-//Este método ordena de orden descendenta a ascendente los dígitos de un número
+//Este método ordena de orden descendente a ascendente los dígitos de un número
 int ordenaNA(int num){
 	int temp = 0;
 	int acum = 0;
