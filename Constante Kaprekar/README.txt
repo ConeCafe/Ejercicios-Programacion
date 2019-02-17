@@ -19,4 +19,4 @@ Por ejemplo, el número 3524 alcanzará la constante de Kaprekar en 3 iteracione
 
 
 
-Aunque esté escrito en C, es fácil transformar los métodos que aparecen a otro lenguaje de programación como Java.
+En la carpeta Java, se podrá encontrar el análogo del código en C en dicho lenguaje. Aunque en la versión Java en vez de usar una función que invierte los dígitos de un número he puesto la correspondiente que ordena los dígitos de orden ascendente a descendente.
