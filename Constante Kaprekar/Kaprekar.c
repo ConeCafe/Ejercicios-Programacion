@@ -26,7 +26,7 @@ int ordenaNA(int num){
 	int temp = 0;
 	int acum = 0;
 	int a = num;
-//Este bucle hace que se miren primero los dígitos más bajos
+//Este bucle hace que se miren primero los dígitos más bajos 
 	while(temp<10){
 		num = a;
 		while (num > 0){
