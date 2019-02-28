@@ -8,6 +8,7 @@ public class MatricesJava {
 		muestraMatriz(iMatriz());
 		System.out.println("\nEjercicio: ");
 		System.out.println(coincidenSumasMatriz(iMatriz()));
+		System.out.println("\nSegunda parte: \n"+sumaMatrices2(iMatriz()));
 		
 	}
 	
@@ -111,6 +112,26 @@ public class MatricesJava {
 		}
 		
 	}
+	
+	//Otro metodo, aqui invocamos a un metodo que recibe una matriz, dos coordenadas y para ahorrar codigo el tamaño de la matriz
+	
+	public static Boolean sumaMatrices2(int[][] m) {
+		return sumaMatrices2(m, 0, 0, m.length);
+	}
 
+	private static Boolean sumaMatrices2(int[][]m, Integer i, Integer j, Integer tam) {
+		Boolean res;
+		if(tam==1) {
+			res = true;
+			return res;
+		}else {
+			res = m[i][j]+m[i+tam-1][j+tam-1]==m[i][j+tam-1]+m[i+tam-1][j]&&
+					sumaMatrices2(m, i, j, tam/2) &&
+					sumaMatrices2(m, i + tam/2, j, tam/2) &&
+					sumaMatrices2(m, i, j + tam/2, tam/2) &&
+					sumaMatrices2(m, i + tam/2, j + tam/2, tam/2);
+			return res;
+		}
+	}
 	
 }
