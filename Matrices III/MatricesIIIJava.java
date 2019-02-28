@@ -63,7 +63,12 @@ public class MatricesIIIJava {
 					cuentaUnos(m, i + tam/2, j, tam/2, c) +
 					cuentaUnos(m, i, j + tam/2, tam/2, c) +
 					cuentaUnos(m, i + tam/2, j + tam/2, tam/2, c);	
-			
+			/*
+			 * En orden, la primera llamada calculara el elemento superior de la izquierda de las submatrices que formen
+			 * inferior izquierda
+			 * superior derecha
+			 * inferior derecha
+			 */
 		}		
 		
 	}
