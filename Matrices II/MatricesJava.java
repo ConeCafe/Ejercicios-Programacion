@@ -45,6 +45,11 @@ public class MatricesJava {
 	}
 	
 	public static boolean coincidenSumasMatriz(int [][] matriz) {
+		
+		if(matriz.length==1) {
+			return true;
+		}
+		
 		if(matriz.length==2) {
 			if (matriz[0][0] + matriz[1][1] == matriz[0][1]+ matriz[1][0]) {
 				return true;
